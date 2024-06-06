@@ -2,7 +2,7 @@
 
 /**
  * tree_is_perfect - Checks if a binary tree is perfect.
- * A perfect binary tree has the same number of levels in the left and right subtrees,
+ * A perfect binary tree has the same number of levels,
  * and each node has either 2 children or no children.
  * @tree: Pointer to the root node of the tree.
  * Return: 0 if the tree is not perfect, or the level of height if it is perfect.
@@ -22,8 +22,7 @@ int tree_is_perfect(const binary_tree_t *tree)
 	}
 	else if (!tree->left && !tree->right)
 		return (1);
-	else
-		return (0);
+	return (0);
 }
 
 /**
