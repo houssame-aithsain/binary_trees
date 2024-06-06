@@ -5,7 +5,7 @@
  * A perfect binary tree has the same number of levels,
  * and each node has either 2 children or no children.
  * @tree: Pointer to the root node of the tree.
- * Return: 0 if the tree is not perfect, or the level of height if it is perfect.
+ * Return: 0 if the tree is not perfect.
  */
 int tree_is_perfect(const binary_tree_t *tree)
 {
@@ -36,11 +36,11 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	if (tree == NULL)
 		return (0);
-	else
-	{
-		result = tree_is_perfect(tree);
-		if (result != 0)
-			return (1);
-		return (0);
-	}
+	
+	result = tree_is_perfect(tree);
+	
+	if (result != 0)
+		return (1);
+	
+	return (0);
 }
